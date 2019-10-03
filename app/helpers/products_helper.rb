@@ -1,5 +1,5 @@
 module ProductsHelper
-  helper_method :cart
+  #helper_method :cart
   def add 
     cart << params[:product]  
     render :index
