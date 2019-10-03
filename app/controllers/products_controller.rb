@@ -1,11 +1,11 @@
 class ProductsController < ApplicationController
+  
+  skip_before_action :verify_authenticity_token
+  helper_method :cart
+  
   def index
   end
   
-  def new 
-    
-  end
-
   def add
     cart << params[:product]
     redirect_to '/'
