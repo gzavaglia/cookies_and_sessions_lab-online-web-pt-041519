@@ -11,4 +11,8 @@ class ProductsController < ApplicationController
     redirect_to '/'
   end
   
+  def current_cart
+    session[:cart] ||= []
+  end
+  
 end
